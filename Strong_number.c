@@ -1,31 +1,37 @@
+
 #include <stdio.h>
 
-int main() {
-    int n, temp, remainder;
-    long long sum = 0;
+int main()
+{
+    int n, original, digit;
+    int factorial, sum = 0, i;
 
-    printf("Enter an integer: ");
+    printf("Enter a number: ");
     scanf("%d", &n);
 
-    temp = n;
+    original = n;
 
-    while (temp > 0) {
-        remainder = temp % 10;
-        
-        
-        long long fact = 1;
-        for (int i = 1; i <= remainder; i++) {
-            fact *= i;
+    while (n > 0)
+    {
+        digit = n % 10;
+        factorial = 1;
+
+        for (i = 1; i <= digit; i++)
+        {
+            factorial = factorial * i;
         }
-        
-        sum += fact;
-        temp /= 10;
+
+        sum = sum + factorial;
+        n = n / 10;
     }
 
-    if (sum == n && n > 0) {
-        printf("%d is a Strong number.\n", n);
-    } else {
-        printf("%d is not a Strong number.\n", n);
+    if (sum == original)
+    {
+        printf("%d is a Strong number.", original);
+    }
+    else
+    {
+        printf("%d is not a Strong number.", original);
     }
 
     return 0;
