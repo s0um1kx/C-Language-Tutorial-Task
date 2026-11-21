@@ -8,10 +8,10 @@ void main() {
     }
 
     for(i = 0; i <5; i ++){
-        printf("%d\n",i,a[i]);
+        printf("%d\n",a[i]);
     }
 
     for(i = 4; i >= 0; i --){
-        printf("%d\n",i,a[i]);
+        printf("%d\n",a[i]);
     }
 }
